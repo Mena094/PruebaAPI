@@ -1,7 +1,9 @@
 import express from "express"
 import fs from "fs"
+import dotenv from "dotenv"
 const app  = express();
-const PORT = 3000;
+dotenv.config();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
